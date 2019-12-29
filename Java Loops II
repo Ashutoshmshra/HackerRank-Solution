@@ -1,0 +1,40 @@
+import java.util.*;
+import java.io.*;
+//import java.util.Math;
+
+class Solution{
+    public static void main(String []argh){
+        Scanner in = new Scanner(System.in);
+        int t=in.nextInt();
+        int a = 0;
+        int b = 0;
+        int n = 0;
+        for(int i=0;i<t;i++){
+             a = in.nextInt();
+              //System.out.printf(a+" a value ,");
+             b = in.nextInt();
+              //System.out.printf(b+" b value,");
+             n = in.nextInt();  
+             // System.out.printf(n+" n value, ");
+             showData(a,b,n);
+        }
+        
+         in.close();
+    }
+    static void showData(int a, int b, int n)
+         {
+       int ans = 0;
+        int temp = 0;
+        for(int i = 0; i<n;i++){
+            temp = 0;
+            for(int j = 0;j<=i;j++){ 
+                temp = temp +(int)(Math.pow(2.0,j)*b);
+            }
+            temp+=a;
+            System.out.print(temp + " ");
+        }
+        System.out.print("\n");
+    }
+       
+}
+
