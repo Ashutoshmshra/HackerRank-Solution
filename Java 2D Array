@@ -1,0 +1,45 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int arr[][] = new int[6][6];
+        for(int i=0; i < 6; i++){
+            for(int j=0; j < 6; j++){
+                arr[i][j] = in.nextInt();
+            }
+        }
+       /* in.close();
+        int maxi = 0;
+        for(int i=0; i<4; i++){
+            for(int j=0;j<4;j++){
+
+                int sum = a[i][j] + a[i][j+1] + a[i][j+2] +a[i+1][j+1] + a[i+2][j] + a[i+2][j+1] + a[i+2][j+2];
+                if(sum>maxi) {maxi = sum;}
+            }
+        }
+
+        System.out.println(maxi);
+
+}
+0}*/
+ int sum =Integer.MIN_VALUE;
+        int hourGlasses = (6*6) - (2*6) - (2*4);
+        
+        for (int i=0; i < hourGlasses; i++){
+            int c = i / 4; //column
+            int r = i % 4; //row
+            int val = arr[c][r] + arr[c][r+1] + arr[c][r+2] + arr[c+1][r+1] + arr[c+2][r] + arr[c+2][r+1] + arr[c+2][r+2];
+            if (val > sum){
+                sum = val;
+            }
+        }
+        
+        System.out.println(sum);
+    }
+}
