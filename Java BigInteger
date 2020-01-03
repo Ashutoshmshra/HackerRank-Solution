@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner s =new Scanner(System.in);
+        BigInteger b1=s.nextBigInteger();
+         BigInteger b2=s.nextBigInteger();
+         BigInteger bs=b1.add(b2);
+         BigInteger bm=b1.multiply(b2);
+        
+       // s=a.pow(b);
+       // BigInteger m;
+       // m=a.multiplication(b);
+        System.out.println(bs);
+            System.out.println(bm);
+    }
+}
